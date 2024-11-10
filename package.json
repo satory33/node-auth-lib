@@ -1,0 +1,45 @@
+{
+  "name": "node-auth-lib",
+  "version": "1.0.0",
+  "description": "A lightweight and secure authentication library for Node.js applications with MySQL support",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "authentication",
+    "auth",
+    "jwt",
+    "mysql",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satory33/node-auth-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/satory33/node-auth-lib/issues"
+  },
+  "homepage": "https://github.com/satory33/node-auth-lib#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.2.0",
+    "node-auth-lib": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npx babel lib -d dist/lib && npx babel models -d dist/models && npx babel index.js -d dist",
+    "prepare": "npm run clean && npm run build",
+    "test": "jest"
+  }
+}
