@@ -116,16 +116,20 @@ auth.logout(token: string): Promise<void>
 - Input sanitization
 - Session management
 
-## 🧪 Testing
+## 🧪 Try It Out
 
-Run the test suite:
+You can test all the authentication features using our CLI testing tool:
+
 ```bash
-# Run all tests
-npm test
-
-# Run with coverage
-npm run test:coverage
+# Run the interactive CLI test tool
+node test-cli.js
 ```
+
+This will start an interactive menu where you can:
+- Register new users
+- Login with existing credentials
+- Test password reset functionality
+- Verify authentication tokens
 
 ## 📝 Project Structure
 
@@ -139,7 +143,7 @@ npm run test:coverage
 ├── database/
 │   └── schema.sql      # MySQL schema
 ├── .env                # Environment variables
-├── example.js          # Usage examples
+├── test-cli.js         # Interactive testing tool
 └── README.md
 ```
 
